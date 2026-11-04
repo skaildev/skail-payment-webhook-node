@@ -1,0 +1,114 @@
+:root {
+  color-scheme: light dark;
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --ok: #16a34a;
+  --bad: #dc2626;
+  --warn: #d97706;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font:
+    16px/1.5 system-ui,
+    sans-serif;
+  background: Canvas;
+  color: CanvasText;
+}
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  font-size: 1rem;
+  margin: 2rem 0 0.5rem;
+}
+.subtitle {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 1.5rem 0 1rem;
+}
+button {
+  font: inherit;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.sent {
+  color: var(--muted);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.error {
+  color: var(--bad);
+}
+.empty {
+  color: var(--muted);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+th,
+td {
+  text-align: left;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid color-mix(in srgb, CanvasText 15%, transparent);
+}
+.mono {
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+}
+.dup {
+  color: var(--warn);
+  font-weight: 600;
+}
+.badge {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--muted);
+  color: #fff;
+  font-size: 0.85rem;
+}
+.badge.Running {
+  background: var(--accent);
+}
+.badge.Released {
+  background: var(--ok);
+}
+.badge.Pending {
+  background: var(--warn);
+}
+.badge.Failed,
+.badge.NotAccepted {
+  background: var(--bad);
+}
+.result {
+  margin-left: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
